@@ -27,7 +27,12 @@ public class GitHubRepositoryServiceImpl implements GitHubRepositoryService {
 
 	@Override
 	public RepoDetailsResponseDto fetchRepoDetailsByUserAndRepoNames(String userName, String repoName) {
-		return null;
+		return webClient
+				.get()
+				.uri("/repos/{userName}/{repoName}", userName, repoName)
+				.retrieve()
+				.bodyToMono(RepoDetailsResponseDto.class)
+				.block();
 	}
 
 	@Override
