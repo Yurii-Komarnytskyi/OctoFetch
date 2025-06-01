@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.ykomarnytskyi.octofetch.dao.BriefRepoDatailsResponseDto;
 import com.ykomarnytskyi.octofetch.dao.RepoDetailsResponseDto;
-import com.ykomarnytskyi.octofetch.service.GitHubRepositoryService;
+import com.ykomarnytskyi.octofetch.service.RepositoryService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -21,10 +21,10 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 @RequestMapping("/api/github")
 public class GitHubRepositoryController {
 
-	private final GitHubRepositoryService repositoryService;
+	private final RepositoryService repositoryService;
 
 	@Autowired
-	public GitHubRepositoryController(GitHubRepositoryService repositoryService) {
+	public GitHubRepositoryController(RepositoryService repositoryService) {
 		this.repositoryService = repositoryService;
 	}
 

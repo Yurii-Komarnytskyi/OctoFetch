@@ -12,7 +12,7 @@ import com.ykomarnytskyi.octofetch.dao.BriefRepoDatailsResponseDto;
 import com.ykomarnytskyi.octofetch.dao.RepoDetailsResponseDto;
 
 @Service
-public class GitHubRepositoryServiceImpl implements GitHubRepositoryService {
+public class GitHubRepositoryServiceImpl implements RepositoryService {
 	
 	private final WebClient webClient;
 	private final GitHubPropertiesConfig gitHubPropertiesConfig;
