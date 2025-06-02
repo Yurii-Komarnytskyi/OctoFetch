@@ -4,8 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "github")
-public class GitHubPropertiesConfig {
+@ConfigurationProperties(prefix = "platform")
+public class VersionControlPlatformPropertiesConfig {
 	private String personalAccessToken;
 
 	public String getPersonalAccessToken() {
