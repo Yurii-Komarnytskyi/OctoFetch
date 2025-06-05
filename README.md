@@ -10,8 +10,7 @@
    cd OctoFetch
 
 2. **Build the Docker image**:
-    mvn clean package
-    docker build -t octofetch:latest .
+    docker buildx build -t octofetch:latest .
 
 3. **Run the container**:
     docker run -p 8080:8080 -e GITHUB_PERSONAL-ACCESS-TOKEN=your_token_here octofetch:latest
